@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>Tundra school</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'img/logo_icon.png' %}" type="icon type">
+    <link rel="icon" href="{% static 'img/logo_icon.png' %}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Philosopher&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <script type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
+    <script>
+        window.start.init({Palette:"palette2",Mode:"floating left",Theme:"wire",Time:"5",Message:"Этот сайт использует файлы cookie.",LinkText:"Узнать больше",ButtonText:"Окей!",Location:"https://www.cookiepolicygenerator.com/live.php?token=9nOtWIO1csZD1jIZL59pAWNhYhf8vGkp",})
+    </script>
+    <button onclick="topFunction()" id="top-button" title="Go to top">↑</button>
+	<header>
+        <div id="myModal" class="modal">
+            <!-- Modal main -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div></div>
+                    Личный кабинет
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Доступ к личному кабинету будет открыт в сентябре с началом занятий.
+                    </p>
+                    <p>
+                        Пока вы можете записаться на курс, <a class="go-to-form" id="go-to-form" href="#form">заполнив анкету</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <input type="checkbox" id="checkbox-menu">
+            <label for="checkbox-menu">
+                <ul class="menu touch">
+                    <li><a class="logo" href="#">Tundra School</a></li>
+                    <li><a href="#about-us">О школе</a></li>
+                    <li><a href="#education">Обучение</a></li>
+                    <li><a href="#QA">Q&A</a></li>
+                    <li><a class="sign-up menu-right" href="#form">Записаться</a></li>
+                    <li><a class="cabinet menu-right" href="#" id="cabinet-button">Личный кабинет</a></li>
+                </ul>
+                <div class="toggle">
+                    <div class="logo-name">Tundra School</div>
+                    <div class="toggle-char">
+                        <div class="menu-btn">
+		                    <span></span>
+		                    <span></span>
+		                    <span></span>
+	                    </div>
+                    </div>
+                </div>
+            </label>
+        </nav>
+	</header>
+	<main>
+        <div class="intro">
+            <div class="intro-header">
+                Подготовим к олимпиадам и ЕГЭ!
+            </div>
+            <div class="intro-text">
+                Онлайн-школа для подготовки к олимпиадам и ЕГЭ. Занимайтесь в группах с преподавателями и самостоятельно решайте задачи!
+            </div>
+            <div class="learn-more">
+                <a href="#about-us">Узнать больше ↓</a>
+            </div>
+        </div>
+        <div class="waves">
+            <svg width="100%" height="200px" fill="none" version="1.1"
+             xmlns="http://www.w3.org/2000/svg">
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#FFFFFF" />
+                <stop offset="50%" stop-color="#FFFFFF" />
+                <stop offset="100%" stop-color="#FFFFFF" />
+              </linearGradient>
+              <path
+                fill="url(#grad1)"
+                d="
+                  M0 67
+                  C 273,183
+                    822,-40
+                    1920.00,106
+
+                  V 359
+                  H 0
+                  V 67
+                  Z">
+                <animate
+                  repeatCount="indefinite"
+
+                  attributeName="d"
+                  dur="15s"
+                  attributeType="XML"
+                  values="
+                    M0 77
+                    C 473,283
+                      822,-40
+                      1920,116
+
+                    V 359
+                    H 0
+                    V 67
+                    Z;
+
+                    M0 77
+                    C 473,-40
+                      1222,283
+                      1920,136
+
+                    V 359
+                    H 0
+                    V 67
+                    Z;
+
+                    M0 77
+                    C 973,260
+                      1722,-53
+                      1920,120
+
+                    V 359
+                    H 0
+                    V 67
+                    Z;
+
+                    M0 77
+                    C 473,283
+                      822,-40
+                      1920,116
+
+                    V 359
+                    H 0
+                    V 67
+                    Z
+                    ">
+                </animate>
+              </path>
+            </svg>
+        </div>
+        <div class="about-us" id="about-us">
+            <div class="about-us-header">
+                О школе
+            </div>
+            <div class="line-au"></div>
+            <div class="about-us-text">
+                <div class="text-block">
+                    <span class="tab"></span>Онлайн школа “Тундра” предоставляет олимпиадный курс по физике и математике для 10-11 классов.
+                    Курс включает в себя изучение материала, необходимого для успешного написания олимпиад.
+                    Обучение происходит в группах по 10-20 человек онлайн.
+                    Освоение материала происходит посредством одного видеоурока в неделю, предоставляемого в записи,
+                    в котором подробно разбирается необходимая теория, одного занятия &ndash; семинара,
+                    на котором дети совместно с преподавателем решают задачи, и большого количества задач,
+                    которые находятся в личном кабинете. На вопросы, которые будут возникать у детей в ходе
+                    просмотра видео лекции или же во время решения задач из личного кабинета, наши преподаватели
+                    с радостью ответят на них, каналы связи образованы посредством телеграмм беседы и личной переписки
+                    в соцсетях ученика и учителя.
+                </div>
+                <div class="text-block">
+                    <span class="tab"></span>Онлайн школа “Тундра” отличается от других онлайн школ тем, что мы даем знания,
+                    которые являются необходимыми для успешного выполнения олимпиад всех уровней.
+                    Преподаватели в прошлом являлись активными участниками первого, второго и третьего
+                    уровня олимпиад, также некоторые становились призерами и победителями заключительного этапа Всероссийской
+                    Олимпиады Школьников по физике, куда отбирается лишь 100 лучших учеников по физике каждый
+                    год. По этой причине наша программа является примером грамотного распределения учебного
+                    материала для достижения поставленных целей именно в олимпиадах, ведь мы знаем как
+                    нужно готовиться к каждой олимпиаде в отдельности.
+                </div>
+            </div>
+        </div>
+        <div class="advantages">
+            <div class="advantages-header">
+                Почему именно Tundra School?
+            </div>
+            <div class="adv-main">
+                <div class="adv-block">
+                    <div class="adv-block-icon">
+                        <img src="{% static 'img/icons/icons8-notebook-64.png' %}" width="64" height="64" alt="">
+                    </div>
+                    <div class="adv-block-content">
+                        <div class="adv-block-header">
+                            Персональная программа
+                        </div>
+                        <div class="adv-block-text">
+                            На первом занятии определим уровень знаний и построим программу на следующий год.
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="adv-block">
+                    <div class="adv-block-icon">
+                        <img src="{% static 'img/icons/icons8-graduation-hat-60.png' %}" width="64" height="64" alt="">
+                    </div>
+                    <div class="adv-block-content">
+                        <div class="adv-block-header">
+                            Льготы при поступлении
+                        </div>
+                        <div class="adv-block-text">
+                            Олимпиады помогают получить преимущество при поступлении в вузы.
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="adv-block">
+                    <div class="adv-block-icon">
+                        <img src="{% static 'img/icons/icons8-lesson-60.png' %}" width="64" height="64" alt="">
+                    </div>
+                    <div class="adv-block-content">
+                        <div class="adv-block-header">
+                            Еженедельные занятия
+                        </div>
+                        <div class="adv-block-text">
+                            Преподаватели всегда на связи, они помогут вам освоить материал в любое удобное для вас время.
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="adv-block">
+                    <div class="adv-block-icon">
+                        <img src="{% static 'img/icons/icons8-pc-64.png' %}" width="64" height="64" alt="">
+                    </div>
+                    <div class="adv-block-content">
+                        <div class="adv-block-header">
+                            Занимайтесь откуда удобно
+                        </div>
+                        <div class="adv-block-text">
+                            Школа полностью дистанционная. Все, что от вас надо – это компьютер!
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="waves__">
+            <svg width="100%" height="200px" fill="none" version="1.1"
+             xmlns="http://www.w3.org/2000/svg">
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#BADAFA"></stop>
+                <stop offset="50%" stop-color="#BADAFA"></stop>
+                <stop offset="100%" stop-color="#BADAFA"></stop>
+              </linearGradient>
+              <path
+                fill="url(#grad1)"
+                d="
+                  M0 67
+                  C 273,183
+                    822,-40
+                    1920.00,106
+
+                  V 359
+                  H 0
+                  V 67
+                  Z">
+                <animate
+                  repeatCount="indefinite"
+
+                  attributeName="d"
+                  dur="15s"
+                  attributeType="XML"
+                  values="
+                    M0 77
+                    C 473,283
+                      822,-40
+                      1920,116
+
+                    V 359
+                    H 0
+                    V 67
+                    Z;
+
+                    M0 77
+                    C 473,-40
+                      1222,283
+                      1920,136
+
+                    V 359
+                    H 0
+                    V 67
+                    Z;
+
+                    M0 77
+                    C 973,260
+                      1722,-53
+                      1920,120
+
+                    V 359
+                    H 0
+                    V 67
+                    Z;
+
+                    M0 77
+                    C 473,283
+                      822,-40
+                      1920,116
+
+                    V 359
+                    H 0
+                    V 67
+                    Z
+                    ">
+                </animate>
+              </path>
+            </svg>
+        </div>
+        <div class="education" id="education">
+            <div class="educ-header">
+                Как будет проходить обучение?
+            </div>
+            <div class="line-au"></div>
+            <div class="educ-main">
+                <div class="educ-card-block">
+                    <div class="educ-card">
+                        <div class="card-number">
+                            1
+                        </div>
+                        <div class="card-header">
+                            Практика
+                        </div>
+                        <div class="card-text">
+                            Огромное количество задач в качестве самостоятельной подготовки.
+                        </div>
+                    </div>
+                    <div class="educ-card">
+                        <div class="card-number">
+                            2
+                        </div>
+                        <div class="card-right">
+                            <div class="card-header">
+                                Теория
+                            </div>
+                            <div class="card-text">
+                                Занятия по теории помогут освоить новый материал и вспомнить старый.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="educ-card">
+                        <div class="card-number">
+                            3
+                        </div>
+                        <div class="card-right">
+                            <div class="card-header">
+                                Семинары
+                            </div>
+                            <div class="card-text">
+                                Еженедельные семинары помогут разобраться в решении сложных задач.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="educ-card-block edccb2">
+                    <div class="educ-card">
+                        <div class="card-number">
+                            4
+                        </div>
+                        <div class="card-right">
+                            <div class="card-header">
+                                Четкая структура
+                            </div>
+                            <div class="card-text">
+                                План обучения на весь год с учетом уровня подготовки ученика.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="educ-card">
+                        <div class="card-number">
+                            5
+                        </div>
+                        <div class="card-right">
+                            <div class="card-header">
+                                Обратная связь
+                            </div>
+                            <div class="card-text">
+                                Наши преподаватели ответят на все ваши вопросы.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="educ-card">
+                        <div class="card-number">
+                            6
+                        </div>
+                        <div class="card-right">
+                            <div class="card-header">
+                                Ориентация на поступление
+                            </div>
+                            <div class="card-text">
+                                Серьезная подготовка к любым олимпиадам.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="teachers">
+            <div class="teachers-header">
+                Наши преподаватели
+            </div>
+            <div class="line-au-short"></div>
+            <div class="teachers-list">
+                <div class="teach-card">
+                    <div class="t-photo">
+                        <img src="{% static 'img/maxim.jpg' %}" alt="">
+                    </div>
+                    <div class="t-right">
+                        <div class="t-status">
+                            учитель физики
+                        </div>
+                        <div class="t-name">
+                            Максим
+                        </div>
+                        <div class="t-name">
+                            Ильин
+                        </div>
+                        <div class="t-about">
+                            Учится в аспирантуре Физфака МГУ.
+                            Призер и победитель олимпиад по физике, преподаватель олимпиадной физики во множестве московских школ.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teach-card">
+                    <div class="t-photo">
+                        <img src="{% static 'img/andrey.jpg' %}" alt="">
+                    </div>
+                    <div class="t-right">
+                        <div class="t-status">
+                            учитель математики и информатики
+                        </div>
+                        <div class="t-name">
+                            Андрей
+                        </div>
+                        <div class="t-name">
+                            Аксенов
+                        </div>
+                        <div class="t-about">
+                            Призер олимпиад по программированию.
+                            Набрал высокие баллы по ЕГЭ - 95 по информатике и 98 по математике.
+                            Студент факультета компьютерных наук ВШЭ.
+                        </div>
+                    </div>
+                </div>
+                <div class="teach-card">
+                    <div class="t-photo">
+                        <img src="{% static 'img/danislaw.jpg' %}" alt="">
+                    </div>
+                    <div class="t-right">
+                        <div class="t-status">
+                            учитель физики
+                        </div>
+                        <div class="t-name">
+                            Данислав
+                        </div>
+                        <div class="t-name">
+                            Ильин
+                        </div>
+                        <div class="t-about">
+                            Студент Физфака МГУ. Участник заключительного этапа ВСОШ, член сборной Москвы по физике. Призер и победитель олимпиад по физике (Ломоносов, Физтех, Росатом).
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="waves">
+            <svg width="100%" height="200px" fill="none" version="1.1"
+             xmlns="http://www.w3.org/2000/svg">
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#FFFFFF" />
+                <stop offset="50%" stop-color="#FFFFFF" />
+                <stop offset="100%" stop-color="#FFFFFF" />
+              </linearGradient>
+              <path
+                fill="url(#grad1)"
+                d="
+                  M0 67
+                  C 273,183
+                    822,-40
+                    1920.00,106
+
+                  V 359
+                  H 0
+                  V 67
+                  Z">
+                <animate
+                  repeatCount="indefinite"
+
+                  attributeName="d"
+                  dur="15s"
+                  attributeType="XML"
+                  values="
+                    M0 77
+                    C 473,283
+                      822,-40
+                      1920,116
+
+                    V 359
+                    H 0
+                    V 67
+                    Z;
+
+                    M0 77
+                    C 473,-40
+                      1222,283
+                      1920,136
+
+                    V 359
+                    H 0
+                    V 67
+                    Z;
+
+                    M0 77
+                    C 973,260
+                      1722,-53
+                      1920,120
+
+                    V 359
+                    H 0
+                    V 67
+                    Z;
+
+                    M0 77
+                    C 473,283
+                      822,-40
+                      1920,116
+
+                    V 359
+                    H 0
+                    V 67
+                    Z
+                    ">
+                </animate>
+              </path>
+            </svg>
+        </div>
+        <div class="__QA" id="QA"> <!-- TODO smooth display -->
+            <div class="QA-header">
+                Часто задаваемые вопросы
+            </div>
+            <div class="QA-main">
+                <div class="questions-col">
+                    <div class="QA-block" id="qa__top__1">
+                        <div class="question">
+                            <div class="question-all">
+                                <div class="q-all">
+                                    <span class="q-letter">Q:</span>
+                                    <span class="q-text">
+                                        Сколько будет стоить обучение?
+                                    </span>
+                                </div>
+                            </div>
+                            <a class="qa__get__answer" id="qa__a__1">+</a>
+                        </div>
+                        <div class="answer" id="a__1">
+                            <span class="q-letter">A:</span>
+                            1200₽ в неделю, включает в себя лекцию, семинар и доступ к личному кабинету.
+                        </div>
+                    </div>
+                    <div class="QA-block">
+                        <div class="question">
+                            <div class="question-all">
+                                <div style="flex-direction: row">
+                                    <span class="q-letter">Q:</span>
+                                    <span class="q-text">Когда проходит набор?</span>
+                                </div>
+                            </div>
+                            <a class="qa__get__answer" id="qa__a__2">+</a>
+                        </div>
+                        <div class="answer" id="a__2">
+                            <span class="q-letter">A:</span>
+                            Конечно, для наибольшей эффективности желательно начинать учиться с сентября, но всегда есть возможность записаться!
+                        </div>
+                    </div>
+                    <div class="QA-block">
+                        <div class="question">
+                            <div class="question-all">
+                                <div>
+                                    <span class="q-letter">Q:</span>
+                                    <span class="q-text">Какой уровень необходим для занятий?</span>
+                                </div>
+                            </div>
+                            <a class="qa__get__answer" id="qa__a__3">+</a>
+                        </div>
+                        <div class="answer" id="a__3">
+                            <span class="q-letter">A:</span>
+                            Любой. До начала обучения мы вам пришлем вступительный тест (он никак не влияет на поступление), чтобы определить ваш уровень и подстроить программу.
+                        </div>
+                    </div>
+                </div>
+                <div class="questions-col">
+                    <div class="QA-block" id="qa__top__2">
+                        <div class="question">
+                            <div class="question-all">
+                                <div>
+                                    <span class="q-letter">Q:</span>
+                                    <span class="q-text">Почему именно олимпиады?</span>
+                                </div>
+                            </div>
+                            <a class="qa__get__answer" id="qa__a__4">+</a>
+                        </div>
+                        <div class="answer" id="a__4">
+                            <span class="q-letter">A:</span>
+                            Победителям и призерам олимпиад 1-3 уровня
+                            гарантируется право на БВИ (право на БВИ означает,
+                            что в случае, если вы сдаете ЕГЭ более чем на 75 баллов
+                            по предмету, по которому писали олимпиаду, то вас зачислят в вуз
+                            сразу, не смотря на остальные баллы ЕГЭ) или право на 100 баллов
+                            за ЕГЭ по предмету, по которому вы выиграли олимпиаду. У каждого
+                            вуза есть свои списки олимпиад, которые дают одну из вышеуказанных
+                            привилегий. Настоятельно советуем ознакомиться с ними.
+                            Вот, например, список олимпиад МГУ: https://cpk.msu.ru/files/2021/olymp_benefits.pdf.
+                        </div>
+                    </div>
+                    <div class="QA-block">
+                        <div class="question">
+                            <div class="question-all">
+                                <div>
+                                    <span class="q-letter">Q:</span>
+                                    <span class="q-text">Успею ли я подготовиться?</span>
+                                </div>
+                            </div>
+                            <a class="qa__get__answer" id="qa__a__5">+</a>
+                        </div>
+                        <div class="answer" id="a__5">
+                            <span class="q-letter">A:</span>
+                            Олимпиад только первого уровня больше 7,
+                            олимпиад 1-3 уровня по физике больше 20,
+                            поэтому у вас будет больше 20 попыток поступить
+                            в вуз мечты вместо 1 попытки, если вы готовитесь
+                            только к ЕГЭ. Также, если вы освоите материал, необходимый
+                            для успешного написания олимпиад, подготовка к ЕГЭ займет
+                            совсем немного времени, ведь вы будете знать темы более
+                            углубленно чем от вас требует единый государственный экзамен.
+                            Приходите к нам и мы сделаем все, чтобы вы стали победителем
+                            олимпиады и поступили на факультет своей мечты!
+                        </div>
+                    </div>
+                    <div class="QA-block">
+                        <div class="question">
+                            <div class="question-all">
+                                <div>
+                                    <span class="q-letter">Q:</span>
+                                    <span class="q-text">К каким олимпиадам готовят?</span>
+                                </div>
+                            </div>
+                            <a class="qa__get__answer" id="qa__a__6">+</a>
+                        </div>
+                        <div class="answer" id="a__6">
+                            <span class="q-letter">A:</span>
+                            В зависимотси от амбиций ученика и целей на поступление
+                            мы подготовим вам личный план обучения,
+                            подходящий под любые олимпиады!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="QA-under">
+                Вы можете задавать свой вопрос в <a href="https://vk.com/tundraschool">ВК</a>.
+            </div>
+        </div>
+        <div class="form" id="form">
+            <div class="form__main">
+                <div class="form__header">
+                    Записаться на занятия
+                </div>
+                <div class="form__under__header">
+                    Заполните форму и скоро вам на почту придет письмо с квитанцией об оплате и доступом к личном кабинету.
+                    <br>
+                    За запись до октября мы предоставляем <span style="color: #ff7f50; font-weight: 800!important;">скидку в 15%</span> на следующий месяц!
+                </div>
+                <form action="{% url 'index' %}" method="post" class="form-forms">
+                <div class="items-f">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {% if field.name == "name" %}
+                            <p class="form-item top-item" id="#top-item">{{ field }}</p>
+                        {% else %}
+                            <p class="form-item">{{ field }}</p>
+                        {% endif %}
+                    {% endfor %}
+                    <button type="submit" class="form-item" id="sign-up__button">Записаться</button>
+                </div>
+                </form>
+            </div>
+        </div>
+
+	</main>
+	<footer>
+        <div class="logo_f">
+            Tundra School
+        </div>
+        <div class="docs">
+            ИП Козовита Светлана Григорьевна
+            <br>
+            Связаться с нами: anaxenov@icloud.com
+        </div>
+        <div class="social">
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="https://vk.com/tundraschool" class="fa fa-vk"></a>
+            <a href="#" class="fa fa-telegram"></a>
+        </div>
+	</footer>
+    <script>
+        // cookie policy
+        $(document).on('ready', function() {
+          if (document.cookie.indexOf("accepted_cookies=") < 0) {
+            $('.cookie-overlay').removeClass('d-none').addClass('d-block');
+          }
+
+          $('.accept-cookies').on('click', function() {
+            document.cookie = "accepted_cookies=yes;"
+            $('.cookie-overlay').removeClass('d-block').addClass('d-none');
+          })
+
+          // expand depending on your needs
+          $('.close-cookies').on('click', function() {
+            $('.cookie-overlay').removeClass('d-block').addClass('d-none');
+          })
+        })
+
+
+        let menuBtn = document.querySelector('.menu-btn');
+        let menu = document.querySelector('.menu');
+        menuBtn.addEventListener('click', function(){
+        	menu.classList.toggle('active');
+        })
+
+        menuBtn = document.querySelector('.menu-btn');
+        menu = document.querySelector('.menu');
+        menuBtn.addEventListener('click', function(){
+        	menuBtn.classList.toggle('active');
+        	menu.classList.toggle('active');
+        })
+
+        /* smooth anchors */
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        /* to top button */
+        const to_top_button = document.getElementById("top-button");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                to_top_button.style.display = "block";
+            }
+            else {
+                to_top_button.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollIntoView({
+                behavior: "smooth",
+            });
+        }
+
+        /* modal window */
+
+        // Get the modal
+        const modal = document.getElementById("myModal");
+        const btn = document.getElementById("cabinet-button");
+        const span = document.getElementsByClassName("close")[0];
+        const go_to_form = document.getElementById("go-to-form")
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // Close, when hyperlink is clicked
+        go_to_form.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside the modal, close it
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        /* QA section */
+        function open_answer (id) {
+            const open_ans = document.getElementById(`qa__a__${id}`);
+            const answer = document.getElementById(`a__${id}`);
+            let times_clicked = 0;
+
+            open_ans.onclick = function () {
+                times_clicked++;
+                if (times_clicked % 2 === 1) {
+                    answer.style.display = "block";
+                    open_ans.style.transform = "rotate(45deg)";
+                }
+                else {
+                    answer.style.display = "none";
+                    open_ans.style.transform = "rotate(0deg)";
+                }
+            }
+        }
+
+        for (let i = 1; i <= 6; i++) {
+            open_answer(i);
+        }
+
+    </script>
+</body>
+</html>

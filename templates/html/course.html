@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/course_style.css' %}">
+    <link rel="icon" href="{% static 'img/logo_icon.png' %}" type="icon type">
+    <link rel="icon" href="{% static 'img/logo_icon.png' %}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Philosopher&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<script src="https://kit.fontawesome.com/f67336e3e2.js" crossorigin="anonymous"></script>
+    <header>
+        <div class="logo-head">
+                <a class="logo-link" href="https://tundra-school.ru">
+                    Tundra School
+                </a>
+                <span class="lk-label">Личный кабинет</span>
+            </div>
+            <div class="right-logout">
+                <a href="{% url 'logout' %}" class="logout-link">
+                    <div class="quit-button">Выйти</div>
+                </a>
+            </div>
+    </header>
+    <main>
+        <div class="courses-all">
+            <div class="course-name">
+                {{ course.name }}
+            </div>
+            <div>
+                <ul class="courses-list">
+                    {% for theme in themes %}
+                        {% if theme.2 %}
+                            <li class="courses-item">
+                                <div class="theme">
+                                    <form action="{{ course_id }}/{{ theme.1 }}">
+                                        <input class=course-link" type="submit" value="{{ theme.0 }}"/>
+                                    </form>
+                                </div>
+                            </li>
+                        {% endif %}
+                        <!--
+                        <li>
+                            <span class="lc-checks__check">✔</span>
+                            <span class="lc-checks__feature">{{ theme.0 }}</span>
+                        </li>
+                        -->
+                    {% endfor %}
+                </ul>
+                <div class="closed-themes">
+                    <div class="ct-title">
+                        <i class="fa-solid fa-lock" title="Эти темы пока что закрыты :("></i>
+                    </div>
+                    <ul class="courses-list">
+                        {% for theme in themes %}
+                            {% if not theme.2 %}
+                                <li class="courses-item">
+                                    <div class="theme">
+                                        <form>
+                                            <input class=course-link" type="submit" value="{{ theme.0 }}"/>
+                                        </form>
+                                    </div>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/theme_style.css' %}">
+    <link rel="icon" href="{% static 'img/logo_icon.png' %}" type="icon type">
+    <link rel="icon" href="{% static 'img/logo_icon.png' %}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Philosopher&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js">
+	</script>
+	<script src="jquery.jslatex.packed.js"></script>
+	<script>
+		$(function() {
+			$(".latex1").latex()
+			$(".latex2").latex({url: 'http://www.sitmo.com/gg/latex/latex2png.2.php?z=100&eq={e}'});
+			$(".latex3").latex({
+				callback: function () {
+					this.css({border: '1px solid black'});
+				}
+			});
+			$(".latex4").latex({
+				url: 'http://www.sitmo.com/gg/latex/latex2png.2.php?z=100&eq={e}',
+				callback: function () {
+					this.css({border: '2px solid red'});
+				}
+			});
+		});
+	</script>
+    <header>
+        <div class="logo-head">
+                <a class="logo-link" href="https://tundra-school.ru">
+                    Tundra School
+                </a>
+                <span class="lk-label">Личный кабинет</span>
+            </div>
+            <div class="right-logout">
+                <a href="{% url 'logout' %}" class="logout-link">
+                    <div class="quit-button">Выйти</div>
+                </a>
+            </div>
+    </header>
+    <main>
+        <div class="theme-name">
+            {{ course.name }}/{{ theme_name }}
+        </div>
+        <div class="theory-all">
+            <div class="theory-title">
+                Теория
+            </div>
+            <div class="theory-block">
+                {{ theory|safe }}
+            </div>
+        </div>
+        <div class="tasks-all">
+            <div class="tasks-title">
+                Задачи
+            </div>
+            <div class="tasks">
+                <ol>
+                    {% for task in tasks %}
+                        <li class="task-el">
+                            {{ task|safe }}
+                        </li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

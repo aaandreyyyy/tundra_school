@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login_style.css' %}">
+    <link rel="icon" href="{% static 'img/logo_icon.png' %}" type="icon type">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Philosopher&family=Ubuntu:wght@300;400&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="logo">Tundra School</div>
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                     class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <div class="container" style="padding-left: 0; padding-right: 0;">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <p class="label__enter">Вход в личный кабинет</p>
+                <form action="" method="POST">
+                    {% csrf_token %}
+
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <input name="username" type="text" id="form3Example3" class="form-control form-control-lg"
+                               placeholder="Логин"/>
+                    </div>
+                    <!-- Password input -->
+                    <div class="form-outline mb-3">
+                        <input name="password" type="password" id="form3Example4" class="form-control form-control-lg"
+                               placeholder="Пароль"/>
+                    </div>
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <button type="submit" class="btn btn-primary btn-lg"
+                                style="padding-left: 2.5rem; padding-right: 2.5rem;">
+                            Войти
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+<script>
+   $('.alert').alert()
+</script>
+</body>
+</html>
