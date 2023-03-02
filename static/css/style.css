@@ -1,0 +1,1098 @@
+:root {
+	--main-color: #99CCFF;
+    --side-color: #ff9b42ff;
+    --light-gray: #CCCCCC;
+	--aero-blue: #d5f9deff;
+	--lavender-blue: #ccccffff;
+	--azure-x-11-web-color: #ecfcfdff;
+	--cerulean-blue: #3454d1ff;
+	--deep-saffron: #ff9b42ff;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: Ubuntu;
+}
+
+body, html {
+	overflow-x: hidden;
+	/*background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#9CCBF9)) fixed; */
+	background: #badafa;
+	max-width: 2000px;
+	scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* to top button */
+#top-button {
+  	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	border-radius: 100%;
+	outline: none;
+	background-color: #000000;
+	color: #ffffff;
+	cursor: pointer;
+	transition: all .2s linear;
+}
+
+#top-button:hover {
+  background-color: darkred;
+}
+
+/* Cabinet modal */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 0;
+	border-radius: 8px;
+	width: 50%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+
+/* Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+	from {top:-300px; opacity:0}
+	to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+	color: white;
+	float: right;
+	font-size: 36px;
+	font-weight: bold;
+	transform: translateY(-10px) translateX(-10px);
+	transition: .2s color linear;
+}
+
+.close:hover,
+.close:focus {
+	color: darkred;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-header {
+	font-family: Philosopher;
+	font-size: 24px;
+	padding-top: 15px;
+	color: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	background: #000000;
+	border-radius: 8px 8px 0 0;
+}
+
+.modal-body {
+	line-height: 150%;
+	font-size: 20px;
+	text-align: left;
+	margin: 15px 20px 35px;
+	padding: 16px 16px 30px;
+}
+
+.go-to-form {
+	font-weight: bold;
+	color: darkred;
+	cursor: pointer;
+}
+
+.go-to-form:hover {
+	color: var(--side-color);
+}
+
+nav {
+	margin: 0 auto;
+	max-width: 1100px;
+	width: 100%;
+}
+
+#checkbox-menu,
+.toggle {
+	display: none;
+}
+
+.menu {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	list-style-type: none;
+	position: relative;
+	transform: translateY(-50px);
+}
+
+.menu li a {
+	color: #000;
+	background: #fff;
+	text-decoration: none;
+	align-self: center;
+	border-radius: 8px;
+	font-size: 14px;
+	padding:  60px 20px 15px 20px;
+	display: inline-block;
+	transition: transform .4s linear, background .4s linear;
+}
+
+.menu li a:hover {
+	display: inline-block;
+	background: var(--side-color);
+	transform: translateY(17px);
+	border-radius: 8px;
+}
+
+.menu li a.logo {
+	font-family: Philosopher, serif;
+	font-size: 24px;
+	font-weight: 600;
+	margin-right: 140px;
+}
+
+.menu li a.logo:hover {
+	display: inline-block;
+	background: #ffffff;
+	transform: translateY(0);
+	border-radius: 8px;
+}
+
+.menu li a.sign-up {
+	margin-left: 150px;
+}
+
+.menu li a.menu-right {
+	background: #000000;
+	color: #ffffff;
+}
+
+.menu li a.menu-right:hover {
+	background: darkred;
+}
+
+.intro {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	margin-top: 170px;
+}
+
+.intro-header {
+	font-family: Philosopher, sans-serif;
+	display: flex;
+	justify-content: center;
+	font-size: 44px;
+	font-weight: 800;
+	margin-bottom: 30px;
+}
+
+.intro-text {
+	width: 40%;
+	color: darkred;
+	display: flex;
+	justify-content: center;
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 140px;
+	line-height: 150%;
+}
+
+.learn-more {
+	transform: translateY(50px);
+}
+
+.learn-more a {
+	text-decoration: none;
+	color: #000000;
+	transition: .2s color linear;
+}
+
+.learn-more a:hover {
+	color: darkred;
+}
+
+.about-us {
+	background: #ffffff;
+	transform: translateY(-5px);
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+}
+
+.about-us-header {
+	font-family: Philosopher, serif;
+	font-size: 44px;
+	font-weight: 800;
+	display: flex;
+	justify-content: center;
+	padding-top: 75px;
+	margin-bottom: 25px;
+}
+
+.line-au {
+	border: .5px solid black;
+    margin: 15px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 28%;
+    overflow-x: hidden;
+}
+
+.about-us-text {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	font-size: 19px;
+	font-weight: 300;
+	margin-top: 20px;
+	margin-bottom: 120px;
+	line-height: 160%;
+	text-align: left;
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.text-block {
+	margin-bottom: 20px;
+}
+
+.advantages {
+	background: #ffffff;
+	transform: translateY(-7px);
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 100px;
+}
+
+.advantages-header {
+	font-family: Philosopher;
+	font-size: 44px;
+	font-weight: 800;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	padding-top: 75px;
+	margin-bottom: 45px;
+}
+
+.adv-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	line-height: 150%;
+	margin: 20px 20% 25px;
+}
+
+.adv-block-content {
+	display: flex;
+	flex-direction: column;
+	padding-left: 20px;
+}
+
+.adv-block-header {
+	font-size: 24px;
+	font-weight: 600;
+	padding-bottom: 18px;
+	text-align: left;
+}
+
+.adv-block-text {
+	font-size: 18px;
+	font-weight: 100;
+}
+
+.adv-block-icon {
+	display: flex;
+	align-self: center;
+}
+
+.adv-main {
+	width: 75%;
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+	align-self: center;
+}
+
+.line {
+	border: .5px solid black;
+    margin: 15px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 40%;
+    overflow-x: hidden;
+}
+
+.waves__ {
+	width: 100%;
+	transform: rotate(180deg) translateY(12px);
+	mask-repeat: repeat-x;
+}
+
+.educ-header {
+	font-family: Philosopher;
+	font-size: 44px;
+	font-weight: 800;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	padding-top: 55px;
+	margin-bottom: 45px;
+}
+
+
+.education {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 100px;
+}
+
+.educ-main {
+	display: flex;
+	flex-direction: column;
+}
+
+.educ-card-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: 85px 40px 20px;
+}
+
+.educ-card {
+	width: 23%;
+	padding: 35px 20px 25px;
+	border-radius: 50px;
+	background-color: #badafa;
+	box-shadow: 10px 10px 21px #9DCCFA,
+				-10px -10px 21px #C9E7F7;
+}
+
+
+.card-header {
+	font-family: Philosopher, serif;
+	font-size: 24px;
+	font-weight: 800;
+	display: flex;
+	justify-content: left;
+	margin-bottom: 10px;
+}
+
+.card-text {
+	font-family: Ubuntu, Arial, serif !important;
+    font-weight: 300!important;
+    font-style: normal!important;
+    font-size: 16px!important;
+    line-height: 160%!important;
+    letter-spacing: 0!important;
+}
+
+.card-number {
+	position: absolute;
+    color: coral;
+    opacity: .2;
+	transform: translateY(-30px) translateX(-18px);
+	font-family: Philosopher,Arial!important;
+    font-weight: 700!important;
+    font-style: normal!important;
+    font-size: 96px!important;
+    line-height: 120%!important;
+    letter-spacing: 0 !important;
+}
+
+.teachers {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 100px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+.teachers-header {
+	font-family: Philosopher;
+	font-size: 44px;
+	font-weight: 800;
+	display: flex;
+	justify-content: center;
+	padding-top: 55px;
+	margin-bottom: 45px;
+}
+
+.line-au-short {
+	border: .5px solid black;
+	margin: 15px 15px 60px;
+	display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 18%;
+    overflow-x: hidden;
+}
+
+.teachers-list {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin: 10px;
+}
+
+.teachers-list > * {
+	flex-grow: 1;
+	flex-basis: 25%;
+}
+
+.teach-card {
+	background: #ffffff;
+	width: 30%;
+	margin: 30px 30px 45px;
+	padding: 30px;
+	border-radius: 18px;
+	display: flex;
+	flex-direction: row;
+	box-shadow: 10px 10px 21px #83BFFA,
+				-10px -10px 21px #CBE2F9;
+}
+
+.t-photo img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+}
+
+.t-photo {
+	width: 120px;
+	height: 120px;
+	margin-right: 10px;
+}
+
+.t-right {
+	padding: 15px;
+}
+
+.t-status {
+	color: #b3b3b3;
+	opacity: .7;
+    text-align: left;
+    margin-bottom: 5px;
+    position: relative;
+	transform: translateY(-27px);
+}
+
+.t-name {
+	font-family: Philosopher;
+    font-size: 20px;
+    color: darkred;
+    font-weight: 800;
+    text-align: left;
+    margin-bottom: 5px;
+    position: relative;
+    transform: translateY(-15px);
+}
+
+.t-about {
+	font-weight: 100;
+    display: flex;
+    justify-content: center;
+    line-height: 150%;
+    text-align: left;
+    margin-right: 5px;
+    margin-left: 5px;
+    position: relative;
+    transform: translateY(-5%);
+}
+
+.waves {
+	position: static;
+	z-index: 2;
+}
+
+.__QA {
+	position: static;
+	z-index: 3;
+	background: #ffffff;
+	transform: translateY(-5px);
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	padding-bottom: 250px;
+}
+
+.QA-header {
+	font-family: Philosopher;
+	font-size: 44px;
+	font-weight: 800;
+	display: flex;
+	justify-content: center;
+	padding-top: 55px;
+	margin-bottom: 45px;
+}
+
+.QA-main {
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.questions-col {
+
+}
+
+.QA-block {
+	width: 350px;
+	padding: 30px 70px;
+
+	border-bottom: 1px solid black;
+}
+
+.question {
+	font-family: Philosopher !important;
+	font-size: 24px;
+	font-weight: 800;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 300px;
+}
+
+.question a {
+	cursor: pointer;
+}
+
+.qa__get__answer {
+	font-size: 26px;
+	color: darkred;
+	transform: rotate(0deg);
+	transition: .4s linear;
+}
+
+.answer {
+	width: 100%;
+	font-weight: 100;
+	display: none;
+	text-align: left;
+	transition: .2s linear;
+	line-height: 150%;
+	max-width: 300px;
+	margin-top: 20px;
+}
+
+#qa__top__1 {
+	border-top: 1px solid black;
+}
+
+#qa__top__2 {
+	border-top: 1px solid black;
+}
+
+.QA-under {
+	margin-top: 20px;
+	font-weight: 100;
+}
+
+.QA-under a {
+	text-decoration: none;
+	color: darkred;
+	font-weight: 800;
+}
+
+.question-all {
+	text-align: left;
+}
+
+.form {
+	background: #ffffff;
+	transform: translateY(-5px);
+	display: flex;
+	justify-content: center;
+}
+
+.form__main {
+	padding: 40px;
+	width: 70%;
+	color: #ffffff;
+	background: #000000;
+	border-radius: 12px 12px 0 0;
+}
+
+.form__header {
+	font-family: Philosopher;
+	font-size: 44px;
+	font-weight: 800;
+	display: flex;
+	justify-content: left;
+	margin-bottom: 45px;
+}
+
+.form__under__header {
+	font-weight: 100;
+	line-height: 160%;
+	margin-bottom: 65px;
+}
+
+.__test {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.test {
+	padding-left: 5px;
+	display: flex;
+	align-items: center;
+	font-weight: 100;
+	text-align: left;
+	background: #CCCCCC;
+	color: #000000;
+	height: 50px;
+	width: 20%;
+	border-radius: 8px;
+}
+
+#test-r {
+	background: coral;
+}
+
+::placeholder {
+	padding-left: 5px;
+}
+
+.items-f {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.form-item {
+	width: 18%;
+}
+
+.form-item input, button, select {
+	width: 100%;
+	height: 45px;
+	border: 0;
+	border-radius: 8px;
+	background: #CCCCCC;
+}
+
+#sign-up__button {
+	font-family: Philosopher;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 1200;
+	background: coral;
+
+}
+
+#sign-up__button:hover {
+	cursor: pointer;
+	background-color: darkred;
+	color: #ffffff;
+}
+
+footer {
+	background: black;
+	transform: translateY(-5px);
+	color: #ffffff;
+	height: 250px;
+}
+
+.logo_f {
+	font-family: Philosopher, serif;
+	font-size: 20px;
+	font-weight: 800;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 30px;
+	color: coral;
+}
+
+.docs {
+	padding-left: 20px;
+	color: #808080;
+	line-height: 150%;
+}
+
+.social {
+	padding-left: 20px;
+	padding-top: 40px;
+}
+
+.fa {
+	width: 50px;
+	height: 50px;
+	font-size: 30px!important;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.q-letter {
+	color: darkred;
+	font-family: Philosopher, sans-serif;
+	margin-right: 5px;
+}
+
+.q-text {
+	font-family: Philosopher, sans-serif;
+	font-size: 20px;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+
+@media screen and (max-width: 765px) {
+	.toggle {
+		background: #000000;
+		color: #ffffff;
+		clear: both;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		text-align: center;
+		font-size: 18px;
+		line-height: 40px;
+		width: 100%;
+		transition: all .3s linear;
+	}
+
+	.logo-name {
+		font-size: 24px!important;
+		font-family: Philosopher, sans-serif;
+		margin-left: 7%;
+	}
+
+	.toggle-char {
+		margin-right: 4%;
+		transform: translateY(5px);
+	}
+
+	.menu-btn {
+		width: 30px;
+		height: 30px;
+		position: relative;
+		z-index:2;
+		overflow: hidden;
+	}
+
+	.menu-btn span {
+		width: 20px;
+		height: 2.5px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #CCCCCC;
+		transition: all 1s;
+		border-radius: 2px;
+	}
+
+	.menu-btn span:nth-of-type(2) {
+		top: calc(50% - 5px);
+	}
+
+	.menu-btn span:nth-of-type(3) {
+		top: calc(50% + 5px);
+	}
+
+	.menu-btn.active span:nth-of-type(1) {
+	  display: none;
+	}
+
+	.menu-btn.active span:nth-of-type(2) {
+	  top: 50%;
+	  transform: translate(-50%, 0%) rotate(45deg);
+	}
+
+	.menu-btn.active span:nth-of-type(3) {
+	  top: 50%;
+	  transform: translate(-50%, 0%) rotate(-45deg);
+	}
+
+	.toggle:hover {
+		color:  #000000;
+		background: #ffffff;
+	}
+
+	#checkbox-menu:checked + label .touch li {
+		opacity: 1;
+		visibility: visible;
+		transition: all .8s linear;
+	}
+
+	#checkbox-menu:checked + label .touch {
+		background: #000000;
+		color: #ffffff;
+		height: 285px;
+	}
+
+	.menu {
+		display: flex;
+		flex-direction: column;
+		justify-content: normal;
+		align-items: center;
+		height: 0;
+		transition: height .3s linear;
+		transform: translateY(0);
+	}
+
+	.menu li {
+		display: flex;
+		align-self: center;
+		width: 100%;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.menu li a {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		align-self: center;
+		align-content: center;
+		padding: 17px;
+		font-size: 20px;
+		border-radius: 0;
+	}
+
+	.menu li a:hover {
+		transform: translateY(0);
+		background: #ffffff;
+		border-radius: 0;
+	}
+
+	.menu li a.logo {
+		display: none;
+		font-size: 24px;
+		margin-right: 0;
+	}
+
+	.menu li a.QA {
+		margin-right: 0;
+	}
+
+	.menu li a.sign-up {
+		margin-left: 0;
+	}
+
+	.intro-text {
+		width: 95%;
+		font-weight: 100;
+	}
+
+	.intro {
+		margin-top: 40px;
+	}
+
+	.intro-header {
+		margin-bottom: 60px;
+		width: 75%;
+	}
+
+	.about-us-text {
+		width: 85%;
+	}
+
+	.adv-block {
+		margin: 20px 5% 25px;
+	}
+
+	.adv-block-content {
+		padding-left: 25px;
+	}
+
+	.edccb2 {
+		display: none;
+	}
+
+	.educ-card-block {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.educ-card {
+		width: 70%;
+		margin-bottom: 50px;
+	}
+
+	.teachers-header {
+		text-align: center;
+	}
+
+	.line-au-short {
+		width: 40%;
+	}
+
+	.teachers {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.teachers-list {
+		margin: 0;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.teach-card {
+		width: 70%;
+		margin: 0 0 65px;
+		padding-bottom: 15px;
+		flex-direction: column;
+	}
+
+	.t-photo {
+		display: flex;
+		align-self: center;
+		transform: translateY(-60px);
+		margin-right: 0;
+	}
+
+	.t-right {
+		padding: 0;
+		transform: translateY(-10px);
+	}
+
+	.QA-header {
+		text-align: center;
+	}
+
+	.QA-main {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#qa__top__2 {
+		border-top: 0;
+	}
+
+	.items-f {
+		flex-direction: column;
+		justify-content: center;
+
+	}
+
+	.form-item {
+		width: 100%;
+	}
+
+	.form-forms {
+		border-radius: 8px;
+	}
+
+	.form-item input, button, select {
+		border-radius: 0;
+		border-bottom: .5px solid black;
+	}
+
+	.top-item input {
+		border-radius: 8px 8px 0 0!important;
+	}
+
+	#sign-up__button {
+		border-radius: 0 0 8px 8px;
+	}
+
+	.t-about {
+		margin: 0;
+	}
+}
+
+
+@media screen and (max-width: 1080px) {
+	.menu li a.sign-up {
+		margin-left: 50px;
+	}
+
+	.menu li a.logo {
+		margin-right: 100px;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.menu li a.sign-up {
+		margin-left: 30px;
+	}
+
+	.menu li a.logo {
+		margin-right: 100px;
+	}
+}
+
+@media screen and (max-width: 920px) {
+	.menu li a.sign-up {
+		margin-left: 0;
+	}
+
+	.menu li a.logo {
+		margin-right: 60px;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.menu li a.sign-up {
+		margin-left: 0;
+	}
+
+	.menu li a.logo {
+		margin-right: 20px;
+	}
+}

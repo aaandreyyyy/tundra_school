@@ -1,0 +1,200 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Ubuntu, sans-serif;
+}
+
+body {
+    background: #f0f0f3;
+	overflow-x: hidden
+}
+
+.fa-solid .fa-lock {
+	width: 30px;
+	height: 30px;
+	font-size: 30px!important;
+	color: #000000;
+	text-decoration: none;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-left: 8%;
+	margin-right: 8%;
+}
+
+.right-all {
+	display: flex;
+	flex-direction: row;
+}
+
+.right-logout {
+	width: 65px;
+}
+
+.quit-button {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: darkred;
+	border-radius: 0 0 10px 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 20px;
+	transition: background .3s linear;
+}
+
+.logout-link {
+	display:inline-block;
+	color: white;
+	text-decoration: none;
+    height:100%;
+}
+
+.quit-button a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+
+.quit-button:hover {
+	background: coral;
+}
+
+.quit-button .logout-link:hover {
+	color: #000000;
+}
+
+
+
+.logo-head {
+	display: flex;
+	justify-content: center;
+	border: 4px solid #000000;
+	border-top: 0;
+	border-radius: 0 0 30px 30px;
+}
+
+.logo-head a {
+	padding: 18px 25px;
+	font-size: 26px;
+	font-family: Philosopher, sans-serif!important;
+	text-decoration: none;
+	color: #ffffff;
+	background: #000000;
+	border-radius: 0 0 0 26px;
+}
+
+.logout-link {
+	margin-left: 0;
+}
+
+.lk-label {
+	font-size: 26px;
+	font-family: Philosopher, sans-serif;
+	margin: 18px 15px 0 15px;
+}
+
+.courses-all {
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 50px;
+}
+
+.course-name {
+	font-family: Philosopher, sans-serif;
+	font-size: 26px;
+	margin-bottom: 30px;
+}
+
+/* TODO header for mobile */
+
+.courses-list {
+	list-style: none;
+	margin-left: 10px;
+}
+
+.courses-item {
+	height: 50px;
+}
+
+.courses-item input {
+	height: 50px;
+	width: 90%;
+	text-align: left;
+	padding-left: 15px;
+	border: 0;
+	border-top: .5px solid black;
+}
+
+.courses-item:hover input {
+	cursor: pointer;
+}
+
+.courses-item:nth-child(even) input{
+	background: #DCDCDC;
+}
+
+
+.courses-item:nth-child(odd) input{
+	background: #f0f0f3;
+}
+
+.courses-item:last-child input {
+	border-bottom: .5px solid black;
+}
+
+.closed-themes {
+	margin-top: 30px;
+
+}
+
+.ct-title {
+	padding-left: 10px;
+	margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 700px) {
+	header {
+		justify-content: space-between;
+		margin: 0;
+	}
+
+	.logo-head {
+		border-radius: 0 0 30px 0;
+		border-left: 0;
+		margin-right: 10px;
+	}
+
+	.logo-head a {
+		border-radius: 0;
+	}
+
+	.right-logout {
+		justify-content: flex-end;
+		transform: translateX(-60px);
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.quit-button {
+		border-radius: 0;
+		padding-left: 10px;
+	}
+
+	.right-logout {
+		transform: translateX(-45px);
+	}
+
+	.logo-head a {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}

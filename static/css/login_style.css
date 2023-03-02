@@ -1,0 +1,36 @@
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+.h-custom {
+    height: calc(100% - 73px);
+}
+
+body {
+    height: auto;
+}
+@media (max-width: 450px) {
+    .h-custom {
+        height: 100%;
+    }
+}
+
+.logo {
+    font-family: Philosopher;
+    background: darkred;
+    color: #ffffff;
+    text-align: center;
+    font-size: 36px;
+}
+
+.label__enter {
+    font-family: Philosopher;
+    text-decoration: underline;
+    font-size: 27px;
+    text-align: left;
+    padding-bottom: 10px;
+}
